@@ -19,7 +19,7 @@ class DioAdapter extends CNetAdapter {
     _dio = Dio(baseOptions);
     _dio.interceptors.add(SignInterceptor());
     if (AppConfig.isDebug) {
-      _dio.interceptors.add(HttpFormatter());
+      // _dio.interceptors.add(HttpFormatter());
     }
     _dio.interceptors.add(CommonInterceptor());
   }
@@ -44,7 +44,7 @@ class DioAdapter extends CNetAdapter {
         response = await _dio.delete(request.url(),
             options: options, data: request.body);
       }
-      return buildRes(response, request);
+      return buildRes<T>(response, request);
     } catch (e) {
       rethrow;
     }

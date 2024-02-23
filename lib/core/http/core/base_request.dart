@@ -51,9 +51,11 @@ abstract class BaseRequest {
     Uri uri;
     String pathStr = path();
     if (pathParams != null) {
-      pathStr = "$pathStr$pathParams";
-    } else {
-      pathStr = "$pathStr/$pathParams";
+      if (pathStr.contains("/")) {
+        pathStr = "$pathStr$pathParams";
+      } else {
+        pathStr = "$pathStr/$pathParams";
+      }
     }
 
     if (isHttps) {

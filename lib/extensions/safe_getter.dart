@@ -35,7 +35,7 @@ mixin SafeAble {
     if (value == null) {
       return value;
     }
-    return SafeAbleData(data);
+    return SafeAbleData(value);
   }
 
   List<dynamic> getList(String key) {

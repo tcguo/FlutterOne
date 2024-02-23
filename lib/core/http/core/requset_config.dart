@@ -11,7 +11,7 @@ class RequestConfig {
     "app_key": "IMkVwSjhsNq2egfu",
     "os_type": AppConfig.osType,
     "os_version": "10.0",
-    "app_version": "7.7.2",
+    "app_version": "7.9.2",
     "install_id": "202209081736000448",
     "network": "wifi",
     "channel": "flutter",
@@ -22,13 +22,13 @@ class RequestConfig {
     accessKey = safeAbleData.safeString("accessKey");
     baseParams = Map.of({
       "app_key": safeAbleData.safeString("app_key"),
-      "os_type": safeAbleData.safeString("app_key"),
-      "os_version": safeAbleData.safeString("app_key"),
-      "app_version": safeAbleData.safeString("app_key"),
-      "install_id": safeAbleData.safeString("app_key"),
-      "network": safeAbleData.safeString("app_key"),
-      "channel": safeAbleData.safeString("app_key"),
-      "device_id": safeAbleData.safeString("app_key")
+      "os_type": safeAbleData.safeString("os_type"),
+      "os_version": safeAbleData.safeString("os_version"),
+      "app_version": safeAbleData.safeString("app_version"),
+      "install_id": safeAbleData.safeString("install_id"),
+      "network": safeAbleData.safeString("network"),
+      "channel": safeAbleData.safeString("channel"),
+      "device_id": safeAbleData.safeString("device_id")
     });
   }
 }

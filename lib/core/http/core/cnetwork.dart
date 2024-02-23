@@ -61,7 +61,7 @@ class CNetwork {
   }
 
   Future<dynamic> send<T>(BaseRequest request) async {
-    return await AdapterFactory.getAdapter("dio").send(request);
+    return await AdapterFactory.getAdapter("dio").send<T>(request);
   }
 }
 

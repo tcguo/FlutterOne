@@ -1,8 +1,8 @@
 class AppConfig {
-  static const String appName = "com.xxx";
-  static String appVersion = "1.0.0";
+  static const String appName = "WEA";
+  static String appVersion = "7.9.2";
   static int osType = 1;
 
-  static bool isNotRunInNativeApp = false;
+  static bool isNotRunInNativeApp = true;
   static bool isDebug = true;
 }
