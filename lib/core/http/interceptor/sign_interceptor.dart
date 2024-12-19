@@ -77,5 +77,9 @@ class SignUtils {
 }
 
 class SignInterceptor extends InterceptorsWrapper {
-  // SignInterceptor(): super(onRequest: )
+  SignInterceptor()
+      : super(
+            onRequest: SignUtils.request,
+            onError: SignUtils.error,
+            onResponse: SignUtils.response);
 }

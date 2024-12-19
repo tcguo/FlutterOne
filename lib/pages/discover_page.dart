@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello_flutter/extensions/safe_getter.dart';
+import 'package:hello_flutter/pages/team/teame_list_page.dart';
 import 'package:hello_flutter/request_api/team_list_request.dart';
 import 'package:hello_flutter/widgets/discover_cell.dart';
 
@@ -50,7 +51,13 @@ class _DiscoverPageState extends State<DiscoverPage> {
                   onPressed: () {
                     requestTeamList();
                   },
-                  child: const Text("122")),
+                  child: const Text("获取天气数据")),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(NBATeamListPage.routePath);
+                },
+                child: const Text("球队列表"),
+              ),
               SizedBox(
                   height: 250,
                   child: ListView.builder(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_flutter/core/router/app_routers.dart';
 import 'package:hello_flutter/pages/root_page.dart';
 
 void main() {
@@ -27,6 +28,9 @@ class MyApp extends StatelessWidget {
       ),
       //home: const MyHomePage(title: 'Flutter Demo Home Page'),
       home: const RootPage(),
+      routes: AppRouter.routes,
+      onGenerateRoute: AppRouter.generateRoute,
+      onUnknownRoute: AppRouter.unknowRoute,
     );
   }
 }
@@ -75,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(widget().title),
+        title: Text(widget.title),
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
